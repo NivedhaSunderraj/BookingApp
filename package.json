@@ -1,0 +1,27 @@
+{
+  "name": "book-a-table",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.4.2",
+    "bson": "^1.0.4",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.14.5",
+    "express": "~4.5.1",
+    "express-session": "^1.15.2",
+    "method-override": "~2.0.2",
+    "mongoose": "~3.8.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build:bundle": "browserify ./public/js/app.js | uglifyjs -mc > ./public/js/bundle.js"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "uglifyjs": "^2.4.10"
+  },
+  "author": "Nivedha",
+  "license": "ISC",
+  "description": ""
+}

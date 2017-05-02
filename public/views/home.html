@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+	<div class="container">
+		<div ng-repeat="rest in tagline" >
+			<div class="col-md-4 well">
+				<img src=""/>
+				<form class="form-signin login center-block" data-ng-submit="book()"  method="post" style="width:300px;">
+				<h2>{{rest.restaurant}}</h2>
+				<a>{{rest.website}}</a></br>
+				<span>{{rest.number}}</span></br>
+				<input type="hidden" name="restname" data-ng-model="restname" class="form-control" />
+				<div ng-show="{{ creds !== undefined  && creds.type == 'user'}}">
+					<button class="btn btn-lg btn-primary btn-block login-button center-block" type="submit" >Book</button>
+				</div>
+			</form>
+				</div>
+		</div>
+	</div>
+</div>
