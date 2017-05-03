@@ -109,7 +109,7 @@ exports.create = function(req, res, next) {
               if (err)
                   return next(err);
 
-              return res.redirect('/');
+              return res.json(userObj);
           });
           //  res.json("success");
         }
@@ -120,5 +120,5 @@ exports.logout = function(req, res) {
 
     req.logOut();
 
-    return res.send("success");
+      return res.json({"status" : "success"});
 };
