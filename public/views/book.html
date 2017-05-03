@@ -1,0 +1,18 @@
+<div class="jumbotron text-center" >
+<form class="form-signin center-block"  data-ng-submit="book()" method="post" style="width:300px;" >
+  <fieldset>
+    <h2 class="form-signin-heading text-center">Book</h2>
+
+    <label for="username" class="sr-only">Time</label>
+    <input type="text" id="username" name="username" data-ng-model="credentials.username" class="form-control" placeholder="Time"  autofocus>
+
+    <label for="name" class="sr-only">Tables</label>
+    <input type="text" id="name" name="name" data-ng-model="credentials.name" class="form-control" placeholder="Tables"  autofocus>
+
+    <button class="btn btn-lg btn-primary btn-block center-block login-button" type="submit" >Book</button>
+    <div data-ng-show="error" class="text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+    </fieldset>
+  </form>
+</div>

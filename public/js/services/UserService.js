@@ -1,18 +1,18 @@
 angular.module('UserService', []).factory('User', ['$http', function($http) {
 
-	return {
+  return {
 
-/*  getDatabase: function( onSuccess,  onFailure){
+    /*  getDatabase: function( onSuccess,  onFailure){
 
-    var database = {};
+        var database = {};
 
-    $http.get('/list').then(function (success){
-			onSuccess(success);
-   },function (error){
-		 onFailure(error);
-   });
+        $http.get('/list').then(function (success){
+    			onSuccess(success);
+       },function (error){
+    		 onFailure(error);
+       });
 
-  }*/
-};
+      }*/
+  };
 
 }]);

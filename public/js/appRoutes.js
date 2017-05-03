@@ -18,6 +18,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'UserRegisterController'
 		})
 
+		.when('/book', {
+			templateUrl: 'views/book.html',
+			controller: 'BookController'
+		})
+
+
 		.when('/manager', {
 			templateUrl: 'views/managerLogin.html',
 			controller: 'ManagerController'
