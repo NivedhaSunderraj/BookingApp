@@ -1,4 +1,4 @@
-angular.module('LogoutService', []).factory('Logout', ['$http', function($scope, $http, $routeParams) {
+angular.module('LogoutService', []).factory('Logout', ['$http', function($http, $routeParams) {
 
   return {
 
@@ -9,6 +9,9 @@ angular.module('LogoutService', []).factory('Logout', ['$http', function($scope,
 
 
     }*/
+		logout : function(onSuccess,onFailure){
+			  $http.get('/logoutUser').then(onSuccess,onFailure);
+		}
   };
 
 }]);

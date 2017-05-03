@@ -1,17 +1,17 @@
-angular.module('LogoutCtrl', []).controller('LogoutController', function($rootScope, $scope, $http, $location, $timeout) {
+angular.module('LogoutCtrl', []).controller('LogoutController', function($rootScope, $scope, $http, $location, $timeout,Logout) {
 
+	successFunction = function(data){
 
-  $http.get('/logoutUser').then(function(response) {
-    //if(request.session){console.log(request.session.cred);}
-    sessionStorage.removeItem("cred");
-    $rootScope = $rootScope.$new(true);
+			sessionStorage.removeItem("cred");
+	    $rootScope.creds = undefined;
+	    $location.path('/');
+	}
 
-    //$timeout(function(){
-    $location.path('/');
-    //}, 2000);
+	failureFunction = function(data){
+			 console.log('Error' + data);
+	}
+	Logout.logout(successFunction,failureFunction);
 
-
-  });
 
 
 });

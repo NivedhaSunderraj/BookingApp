@@ -7,9 +7,7 @@ angular.module('MainCtrl', []).controller('MainController', function($rootScope,
         creds = angular.fromJson(sessionStorage.getItem("cred"));
       }
       //if(request.session){console.log(request.session.cred);}
-
       if (creds) {
-
         $rootScope.creds = creds;
       }
       $scope.tagline = response.data;
